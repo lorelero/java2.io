@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assents/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Ejercio 2: Cantidad de Stickers</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Ejercicio 1</a></li>
+          <li><a href="./index2.html">Ejercicio 2</a></li>
+          <li><a href="./index3.html">Ejercicio 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Ejercicio 2-->
+    <div class="titulo">
+      <h2>Segundo ejercicio - desafio Condicionales en Javascript</h2>
+      <h3>Puedes llevar hasta 10 stickers en total</h3>
+    </div>
+
+    <seccion class="ejercicio2">
+      <div class="caja">
+        <img src="./assents/imgs/caramelo.png" alt="stickers-dulce" />
+        <input type="text" id="caja1" />
+        <p id="atento1">Ingresa una cantidad</p>
+      </div>
+      <div class="caja">
+        <img src="./assents/imgs/magdalena.png" alt="stickers-cupcake" />
+        <input type="text" id="caja2" />
+        <p id="atento2">Ingresa una cantidad</p>
+      </div>
+      <div class="caja">
+        <img src="./assents/imgs/pizza.png" alt="stickers-pizza" />
+        <input type="text" id="caja3" />
+        <p id="atento3">Ingresa una cantidad</p>
+      </div>
+
+      <div class="verificar">
+        <p id="cantidad">Cantidad de stickers</p>
+
+        <button
+          onclick="
+        caja1 = document.querySelector('#caja1').value 
+        caja2 = document.querySelector('#caja2').value
+        caja3 = document.querySelector('#caja3').value
+        total = (Number(caja1) + Number(caja2) + Number(caja3))
+        cantidad = document.querySelector('#cantidad')
+        if(Number(total) == 10) {
+         cantidad.innerHTML = 'Lleva la cantidad máxima de stickers'
+         } else if (total > 0 && total < 10){
+        cantidad.innerHTML = 'Te faltan stickers para llevar'
+        }else{
+        cantidad.innerHTML = 'Llevas demasiados stickers'
+        }
+        "
+        >
+          Verificar
+        </button>
+      </div>
+    </seccion>
+
+    <footer id="contacto">
+      <div class="anclafooter">
+        <a href="https://github.com/lorelero" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <span>Lorena Suárez</span>
+    </footer>
+
+    <script defer src="assents/js/script2.js"></script>
+  </body>
+</html>
